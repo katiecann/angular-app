@@ -1,31 +1,30 @@
-<div class="jumbotron">
-  <span class="glyphicon glyphicon-fire" aria-hidden="true"></span><span class="glyphicon glyphicon-fire" aria-hidden="true"></span><span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
-  <h1>Good Tidings!</h1>
+<div ng-app class="jumbotron" ng-controller="MainCtrl">
+  <h1>Pet Roulette for {{current.location}}</h1>
   <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
+    <div ng-init="location='Seattle'">
+        <p>
+          <label for="location">Location:
+            <input type="text" name="location" ng-model="location">
+          </label>
+          <label for="location">Animal:
+            <input type="text" name="animal" ng-model="animal">
+          </label>
+          <label for="location">Size:
+            <input type="text" name="size" ng-model="size">
+          </label>
+        </p>
+        <p>
+          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Find A Pet</button>
+        </p>
+
+      <dl>
+        <dt>Adopt</dt>
+        <dd>{{current.pet.name}}</dd>
+        <dd>{{current.pet.breeds.breed}}</dd>
+        <dt>Details</dt>
+        <dd>{{current.pet.age}}</dd>
+        <dd>{{current.pet.size}}</dd>
+      </dl>
+    </div>
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
-
-<div class="row marketing">
-  <div class="panel panel-success">
-    <div class="panel-heading">
-      <h4 class="panel-title">HTML5 Boilerplate</h4>
-    </div>
-    <div class="panel-body">HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</div>
-  </div>
-
-  <div class="panel panel-success">
-    <div class="panel-heading">
-      <h4 class="panel-title">Angular</h4>
-    </div>
-    <div class="panel-body">AngularJS is a toolset for building the framework most suited to your application development.</div>
-  </div>
-
-  <div class="panel panel-success">
-    <div class="panel-heading">
-      <h4 class="panel-title">Karma</h4>
-    </div>
-    <div class="panel-body">Spectacular Test Runner for JavaScript.</div>
-  </div>
