@@ -13,11 +13,13 @@ angular.module('angularAppApp')
     // ...
 
      // Public API here
-    return $resource('http://api.petfinder.com/pet.getRandom?key=f07bd0733c5bc6925509c31d5dd84b95&location=:location&animal=:animal&size=:size&output=full&format=json', {}, {
+    return $resource('http://api.petfinder.com/pet.find?key=f07bd0733c5bc6925509c31d5dd84b95&location=:location&animal=:animal&size=:size&output=full&format=json', {
+    callback: "JSON_CALLBACK"
+}, {
       query: {
-        method:'GET',
+        method:'JSONP',
         params:{
-          location: 'Seattle,us',
+          location: '98112',
           animal: null,
           size: null
         },
