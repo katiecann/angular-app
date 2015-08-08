@@ -8,14 +8,14 @@
             <input type="text" name="location" ng-model="location">
           </label>
           <br>
-          <label for="location">Animal:
+          <label for="animal">Animal Type:
             <select name="select" name="animal" ng-model="animal">
               <option value="cat">Cat</option> 
               <option value="dog" selected>Dog</option>
               <option value="pig">Pig</option>
             </select>
           </label>
-          <label for="location">Size:
+          <label for="size">Size:
             <select name="select" name="size" ng-model="size">
               <option value="s">Small</option> 
               <option value="m" selected>Medium</option>
@@ -32,6 +32,7 @@
       <dl ng-repeat="pet in current.petfinder.pets.pet">
         <hr>
         <dt>Adopt</dt>
+        <img src="{{pet.media.photos.photo[3].$t}}" alt="" /></p>
         <dd>{{pet.name.$t}}</dd>
         <dd>{{pet.breeds.breed.$t}}</dd>
         <dt>Details</dt>

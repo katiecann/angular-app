@@ -13,7 +13,9 @@ angular.module('angularAppApp')
 
     $scope.refreshCurrent = function(){
         $scope.current = current.query({
-            location: $scope.location
+            location: $scope.location,
+            animal: $scope.animal,
+            size: $scope.size
         });
     };
   });

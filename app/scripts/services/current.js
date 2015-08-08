@@ -20,7 +20,7 @@ angular.module('angularAppApp')
         method:'JSONP',
         params:{
           location: '98112',
-          animal: null,
+          animal: 'dog',
           size: null
         },
         isArray:false
