@@ -29,16 +29,16 @@
         </p>
 
 
-      <dl ng-repeat="pet in current.petfinder.pets.pet">
+      <dl>
         <hr>
         <dt>Adopt</dt>
-        <img src="{{pet.media.photos.photo[3].$t}}" alt="" /></p>
-        <dd>{{pet.name.$t}}</dd>
-        <dd>{{pet.breeds.breed.$t}}</dd>
+        <img src="{{current.petfinder.pets.pet.media.photos.photo[3].$t}}" alt="" /></p>
+        <dd>{{current.petfinder.pets.pet.name.$t}}</dd>
+        <dd>{{current.petfinder.pets.pet.breeds.breed.$t}}</dd>
         <dt>Details</dt>
-        <dd>{{pet.age.$t}}</dd>
-        <dd>{{pet.size.$t}}</dd>
-        <dd>{{pet.description.$t}}</dd>
+        <dd>{{current.petfinder.pets.pet.age.$t}}</dd>
+        <dd>{{current.petfinder.pets.pet.size.$t}}</dd>
+        <dd>{{current.petfinder.pets.pet.description.$t}}</dd>
       </dl>
     </div>
   </p>
