@@ -1,6 +1,6 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
   <h1>Pet Roulette</h1>
-  <h4>What are you looking for?</h4>
+  <h4>What kind of friend are you looking for?</h4>
   <p class="lead">
     <div ng-init="location='98112'">
         <p>
@@ -31,13 +31,12 @@
 
       <dl>
         <hr>
-        <dt>Adopt</dt>
-        <img src="{{current.petfinder.pets.pet.media.photos.photo[3].$t}}" alt="" /></p>
-        <dd>{{current.petfinder.pets.pet.name.$t}}</dd>
-        <dd>{{current.petfinder.pets.pet.breeds.breed.$t}}</dd>
-        <dt>Details</dt>
-        <dd>{{current.petfinder.pets.pet.age.$t}}</dd>
-        <dd>{{current.petfinder.pets.pet.size.$t}}</dd>
+        <h4>You Should Adopt:</h4>
+        <img src="{{current.petfinder.pets.pet.media.photos.photo[3].$t}}" alt="Adoptable animal photo"></p>
+        <h2>{{current.petfinder.pets.pet.name.$t}}</h2>
+        <h5>Breed:  {{current.petfinder.pets.pet.breeds.breed.$t}}</h5>
+        <h5>Age:  {{current.petfinder.pets.pet.age.$t}}</h5>
+        <h5>Size:  {{current.petfinder.pets.pet.size.$t}}</h5>
         <dd>{{current.petfinder.pets.pet.description.$t}}</dd>
       </dl>
     </div>
