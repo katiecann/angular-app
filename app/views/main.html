@@ -43,11 +43,16 @@
                 <h5>Size:  {{current.petfinder.pets.pet.size.$t}}</h5>
                 <dd>{{current.petfinder.pets.pet.description.$t}}</dd>
                 <br>
-            <p><button class="btn btn-sm btn-primary" ng-click="savePet(currentPet)">Save Pet</button></p>
+            <p><button class="btn btn-sm btn-primary" ng-click="savePet(current)">Save Pet</button></p>
 <!--        </li>
         </ul> 
       </div> -->
       </dl>
     </div>
+    <ul>
+      <li ng-repeat="savedPet in storage.savedPets">
+          <a ng-href="#/current/{{savedPet.id}}">{{savedPet.name}}</a>
+      </li>
+    </ul>
   </p>
 </div>
