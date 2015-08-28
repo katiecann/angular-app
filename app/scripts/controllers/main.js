@@ -23,7 +23,8 @@ angular.module('angularAppApp')
     $scope.savePet = function(pet){
         var petData = {
             'name': pet.petfinder.pet.name.$t,
-            'id': pet.petfinder.pet.id.$t
+            'id': pet.petfinder.pet.id.$t,
+            'media': pet.petfinder.pet.media.photos.photo[3].$t
         };
         if (!$localStorage.savedPets){
             $localStorage.savedPets = [petData];
