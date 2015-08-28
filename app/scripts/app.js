@@ -41,3 +41,5 @@ angular
         redirectTo: '/'
       });
   });
+
+  angular.module('testing',['djds4rce.angular-socialshare']);
