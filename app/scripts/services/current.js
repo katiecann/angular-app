@@ -13,18 +13,17 @@ angular.module('angularAppApp')
     // ...
 
      // Public API here
-    return $resource('http://api.petfinder.com/pet.find?key=f07bd0733c5bc6925509c31d5dd84b95&location=:location&animal=:animal&size=:size&count=1&offset=:offset&output=full&format=json', {
-    callback: "JSON_CALLBACK"
-}, {
-      query: {
-        method:'JSONP',
-        params:{
-          location: '98112',
-          animal: 'dog',
-          size: null,
-          offset: 10
-        },
-        isArray:false
-      }
-    });
+    return $resource('http://api.petfinder.com/pet.getRandom?key=f07bd0733c5bc6925509c31d5dd84b95&location=:location&animal=:animal&size=:size&output=full&format=json', {
+        callback: "JSON_CALLBACK"
+    }, {
+          query: {
+            method:'JSONP',
+            params:{
+              location: '98107',
+              animal: 'dog',
+              size: null,
+            },
+            isArray:false
+          }
+        });
   });

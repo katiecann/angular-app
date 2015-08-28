@@ -1,6 +1,6 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
   <h1>Pet Roulette</h1>
-  <h4>What kind of friend are you looking for?</h4>
+  <h4>Find your new best pal with the click of a button</h4>
   <p class="lead">
     <div ng-init="location='98112'">
         <p>
@@ -25,28 +25,21 @@
           </label>
         </p>
         <p>
-          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Find A Pet</button>
+          <button class="btn btn-lg-round btn-primary" ng-click="refreshCurrent()">Find A Pet</button>
         </p>
       </div>
 
 
       <dl>
         <hr>
-<!--     <div ng-if="storage.savedPets">
-            <h4>You Should Adopt:</h4>
-          <ul class="saved-pets-list">
-            <li ng-repeat="pets in storage.savedPets"> -->
-                <img src="{{current.petfinder.pets.pet.media.photos.photo[3].$t}}" alt="Adoptable animal photo"></p>
-                <h2>{{current.petfinder.pets.pet.name.$t}}</h2>
-                <h5>Breed:  {{current.petfinder.pets.pet.breeds.breed.$t}}</h5>
-                <h5>Age:  {{current.petfinder.pets.pet.age.$t}}</h5>
-                <h5>Size:  {{current.petfinder.pets.pet.size.$t}}</h5>
-                <dd>{{current.petfinder.pets.pet.description.$t}}</dd>
+                <img src="{{current.petfinder.pet.media.photos.photo[3].$t}}" alt="Adoptable animal photo"></p>
+                <h2>{{current.petfinder.pet.name.$t}}</h2>
+                <h5>Breed:  {{current.petfinder.pet.breeds.breed.$t}}</h5>
+                <h5>Age:  {{current.petfinder.pet.age.$t}}</h5>
+                <h5>Size:  {{current.petfinder.pet.size.$t}}</h5>
+                <dd>{{current.petfinder.pet.description.$t}}</dd>
                 <br>
-            <p><button class="btn btn-sm btn-primary" ng-click="savePet(current)">Save Pet</button></p>
-<!--        </li>
-        </ul> 
-      </div> -->
+            <p><button class="btn btn-lg-round btn-primary" ng-click="savePet(current)">Save Pet</button></p>
       </dl>
     </div>
     <ul>
