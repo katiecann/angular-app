@@ -1,1 +1,8 @@
-<p>This is the current view.</p>
+<div ng-messages="petSaved">
+    <p class="pet-saved-alert bg-success text-success" ng-message="success">
+        {{currentPet.name}} has been saved to your list of pets.
+    </p>
+    <p class="pet-saved-alert bg-warning text-warning" ng-message="duplicate">
+        {{currentPet.name}} has already been saved to your list of pets.
+    </p>
+</div>

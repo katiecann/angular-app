@@ -33,11 +33,20 @@ $scope.savePet = function(pet){
                 save = false;
             }
         }
+
         if (save===true){
             $localStorage.savedPets.push(petData);
+            // Add object to trigger messages
+            $scope.petSaved = {
+                'success': true
+            };
         } else {
             console.log('pet already saved');
-       }
-            }
-        };
-  });
+            // Add object to trigger messages
+            $scope.petSaved = {
+                'duplicate': true
+            };
+        }
+    }
+};
+});
