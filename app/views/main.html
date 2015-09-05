@@ -32,7 +32,7 @@
    <br>
       <dl class="well searchResults">
           <img src="{{current.petfinder.pet.media.photos.photo[3].$t}}" alt="Adoptable animal photo" class="img-rounded">
-          <h2>{{current.petfinder.pet.name.$t}}</h2>
+          <h2><a href="https://www.petfinder.com/petdetail/{{current.petfinder.pet.id.$t}}" target="_blank">{{current.petfinder.pet.name.$t}}</a></h2>
           <div class="row">
             <div class="col-md-4"><dt>Breed:</dt><dd>{{current.petfinder.pet.breeds.breed.$t}}</dd></div>
             <div class="col-md-4"><dt>Age:</dt><dd>{{current.petfinder.pet.age.$t}}</dd></div>
