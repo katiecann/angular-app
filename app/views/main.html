@@ -1,8 +1,8 @@
 <div ng-app  ng-controller="MainCtrl">
-  <h2>Find your new best pal with the click of a button</h2>
+  <h2 class="header text-center">Find your new best pal with the click of a button</h2>
   <div class="lead">
     <div ng-init="location='98112'">
-        <div class="search">
+        <div>
           <label for="location">Zip Code:
             <input type="text" name="location" ng-model="location">
           </label>
@@ -15,6 +15,7 @@
               <option value="pig">Pig</option>
             </select>
           </label>
+          <br>
 
           <label for="size">Size:
             <select name="select" name="size" ng-model="size">
@@ -26,20 +27,22 @@
           </label>
         </div>
 
-        <button class="btn btn-lg-round btn-primary" ng-click="refreshCurrent()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find</button>
+        <div type:"button" class="text-center">
+          <button class="btn btn-lg-round btn-primary" ng-click="refreshCurrent()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find</button>
+        </div>
     </div>
 
    <br>
-      <dl class="well searchResults">
-          <img src="{{current.petfinder.pet.media.photos.photo[3].$t}}" alt="Adoptable animal photo" class="img-rounded">
+      <dl class="well searchResults text-center">
+          <img src="{{current.petfinder.pet.media.photos.photo[3].$t}}" alt="Adoptable animal photo" class="img-responsive img-rounded">
           <h2><a href="https://www.petfinder.com/petdetail/{{current.petfinder.pet.id.$t}}" target="_blank">{{current.petfinder.pet.name.$t}}</a></h2>
           <div class="row">
-            <div class="col-md-4"><dt>Breed:</dt><dd>{{current.petfinder.pet.breeds.breed.$t}}</dd></div>
-            <div class="col-md-4"><dt>Age:</dt><dd>{{current.petfinder.pet.age.$t}}</dd></div>
-            <div class="col-md-4"><dt>Size:</dt><dd>{{current.petfinder.pet.size.$t}}</dd></div>
+            <div class="col-md-4"><dt>BREED:</dt><dd>{{current.petfinder.pet.breeds.breed.$t}}</dd></div>
+            <div class="col-md-4"><dt>AGE:</dt><dd>{{current.petfinder.pet.age.$t}}</dd></div>
+            <div class="col-md-4"><dt>SIZE:</dt><dd>{{current.petfinder.pet.size.$t}}</dd></div>
           </div>
           <br>
-            <dt class="desc">Description:</dt><dd>{{current.petfinder.pet.description.$t}}</dd>
+            <dt class="desc">DESCRIPTION:</dt><dd>{{current.petfinder.pet.description.$t}}</dd>
           <br>
           <button class="btn btn-lg-round btn-primary" ng-click="savePet(current)"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Save New Buddy</button>
       </dl>
@@ -47,7 +50,7 @@
   </div>
 <br>
   <footer>
-    <h3>Favorites</h3>
+    <h3>FAVORITES</h3>
     <ul>
       <li ng-repeat="savedPet in storage.savedPets">
           <a ng-href="https://www.petfinder.com/petdetail/{{savedPet.id}}" target="_blank">{{savedPet.name}}</a>
