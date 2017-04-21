@@ -1,33 +1,48 @@
 <div ng-app  ng-controller="MainCtrl">
   <h2 class="header text-center">Find your new best pal with the click of a button</h2>
   <div class="lead">
-    <div ng-init="location='98112'">
+    <div ng-init="location='98102'">
         <div>
-          <label for="location">Zip Code:
-            <input type="text" name="location" ng-model="location">
-          </label>
-          <br>
+          <div class="row">
+            <label for="location">
+              <div class="col-xs-12 col-sm-5">Zip Code: </div>
+            <div class="col-xs-12 col-sm-7">
+              <input type="text" name="location" ng-model="location">
+            </div>
+            </label>
+            <br>
+          </div>
 
-          <label for="animal">Animal Type:
-            <select name="select" name="animal" ng-model="animal">
-              <option value="cat">Cat</option> 
-              <option value="dog" selected>Dog</option>
-              <option value="pig">Pig</option>
-            </select>
-          </label>
-          <br>
+          <div class="row">
+            <label for="animal">
+              <div class="col-xs-12 col-sm-5">Animal Type: </div>
+              <div class="col-xs-12 col-sm-7">
+                <select name="select" name="animal" ng-model="animal">
+                  <option value="cat">Cat</option> 
+                  <option value="dog" selected>Dog</option>
+                  <option value="pig">Pig</option>
+                </select>
+              </div>
+            </label>
+            <br>
+          </div>
 
-          <label for="size">Size:
-            <select name="select" name="size" ng-model="size">
-              <option value="S">Small</option> 
-              <option value="M" selected>Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">XLarge</option>
-            </select>
-          </label>
+          <div class="row">
+            <label for="size">
+              <div class="col-xs-12 col-sm-5">Size: </div>
+              <div class="col-xs-12 col-sm-7">
+                <select name="select" name="size" ng-model="size">
+                  <option value="S">Small</option> 
+                  <option value="M" selected>Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">XLarge</option>
+                </select>
+              </div>
+            </label>
+          </div>
         </div>
 
-        <div class="text-center">
+        <div class="text-center find-row">
           <button type="button" class="btn btn-lg-round btn-primary" ng-click="refreshCurrent()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find</button>
         </div>
     </div>
@@ -36,8 +51,8 @@
       <dl class="well searchResults text-center">
           <img src="{{current.petfinder.pet.media.photos.photo[3].$t}}" alt="Adoptable animal photo" class="img-responsive img-rounded">
 
-          <h2><a href="https://www.petfinder.com/petdetail/{{current.petfinder.pet.id.$t}}" target="_blank">{{current.petfinder.pet.name.$t}}</a></h2>
-          <div class="row">
+          <h3><a href="https://www.petfinder.com/petdetail/{{current.petfinder.pet.id.$t}}" target="_blank">{{current.petfinder.pet.name.$t}}</a></h3>
+          <div class="row pet-specs">
             <div class="col-md-4"><dt>BREED:</dt><dd>{{current.petfinder.pet.breeds.breed.$t}}</dd></div>
             <div class="col-md-4"><dt>AGE:</dt><dd>{{current.petfinder.pet.age.$t}}</dd></div>
             <div class="col-md-4"><dt>SIZE:</dt><dd>{{current.petfinder.pet.size.$t}}</dd></div>
